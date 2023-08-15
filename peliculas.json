@@ -1,0 +1,44 @@
+{
+    "peliculas": [
+        {
+            "id": 50921,
+            "name": "Harry Potter y la piedra filosofal",
+            "genero": "Fantasía",
+            "estreno": "2001",
+            "autores": "J.K.Rowling",
+            "image": "img/harrypotter.jpg"
+        },
+        {
+            "id": 50922,
+            "name": "The Ring",
+            "genero": "Terror",
+            "estreno": "2002",
+            "autores": "Ehren Kruger, Scott Frank, Koji Suzuki",
+            "image": "img/thering.jpg"
+        },
+        {
+            "id": 50923,
+            "name": "Buena suerte, Leo Grande",
+            "genero": "Drama",
+            "estreno": "2002",
+            "autores": "Katy Brand",
+            "image": "img/buenasuerteleogrande.jpg"
+        },
+        {
+            "id": 50924,
+            "name": "Divergente",
+            "estreno": "2014 ",
+            "genero": "Fantasía",
+            "autores": "Neil Burger",
+            "image": "img/divergent.jpg"
+        },
+        {
+            "id": 50925,
+            "name": "El señor de los anillos",
+            "genero": "Fantasía",
+            "estreno": "2001",
+            "autores": "J.R.R. Tolkien",
+            "image": "img/elsenordelosanillos.jpg"
+        }
+    ]
+}

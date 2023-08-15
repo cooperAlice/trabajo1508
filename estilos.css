@@ -1,17 +1,80 @@
-body{
-    background-color: brown;
+body {
+    margin: 0;
+    line-height: 1.2;
     font-family: sans-serif;
+    font-size: 15px;
+}
+h1, h2, h3 {
+    margin: 0;
+    font-family: 'Bebas Neue', sans-serif;
+}
+h1 {
+    font-size: 40px;
+    color: rgb(183, 27, 27);
+}
+h2 {
+    font-size: 36px;
+    word-spacing: 4px;
+}
+a {
+    text-decoration: none;
 }
 
-.img{
+.container {
+    margin: 0 auto;
+    max-width: 86%;
+}
+.header {
+    background-image: url(https://images.alphacoders.com/132/1323542.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 700px;
+    color: aliceblue;
+    margin-bottom: 30px;
+}
+.header__background {
+    background-color: rgba(0, 0, 0, 0.75);
+    height: 100%;
+    width: 100%;
+}
+.header_barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+}
+.nav_principal {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+}
+.nav_principal a {
+    color: white;
+    transition: .3s ease;
+}
+.nav_principal a:hover {
+    color: rgba(255, 255, 255, 0.697);
+}
+.header__container h2 {
+    margin-top: 200px;
+    text-align: center;
+}
+
+.col-3 img {
+    width: 200px;
 
 }
 
-h1{
-
+#cat-list-container{
+    
+    text-align: center;
+    margin top: 10px;
+    
 }
 
-.nombre-peli{
-
+.list-group-item {
+    float: left;
+    padding: 30px;
 }
 

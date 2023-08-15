@@ -30,7 +30,7 @@ function showCategoriesList(array) {
     let htmlContentToAppend = "";
     for (let i = 0; i < array.length; i++) {
         htmlContentToAppend += `
-            <div class="list-group-item list-group-item-action">
+            <div class="list-group-item">
                 <div class="row">
                     <div class="col-3">
                         <img src="${array[i].image}" alt="peli image" class="img">
@@ -38,8 +38,10 @@ function showCategoriesList(array) {
                     <div class="col">
                         <div class="d-flex w-100 justify-content-between">
                             <div class="mb-1">
-                                <h4>${array[i].name}-${array[i].estreno} ${array[i].autores} </h4>
-                                <p>${array[i].genero}</p>
+                                <h2 class="nombre-peli">${array[i].name}</h2>
+                                <p>Año de estreno:${array[i].estreno}</p> 
+                                <p>Autores: ${array[i].autores} </p>
+                                <p>Género:${array[i].genero}</p>
                             </div>
                         </div>
                         <small class="text-muted"> </small>

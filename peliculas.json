@@ -6,7 +6,7 @@
             "genero": "Fantasía",
             "estreno": "2001",
             "autores": "J.K.Rowling",
-            "image": "img/harrypotter.jpg"
+            "image": "img/harrypotter.JPG"
         },
         {
             "id": 50922,
@@ -14,7 +14,7 @@
             "genero": "Terror",
             "estreno": "2002",
             "autores": "Ehren Kruger, Scott Frank",
-            "image": "img/thering.jpg"
+            "image": "img/thering.JPG"
         },
         {
             "id": 50923,
@@ -22,7 +22,7 @@
             "genero": "Drama",
             "estreno": "2002",
             "autores": "Katy Brand",
-            "image": "img/buenasuerteleogrande.jpg"
+            "image": "img/buenasuerteleogrande.JPG"
         },
         {
             "id": 50924,
@@ -30,7 +30,7 @@
             "estreno": "2014 ",
             "genero": "Fantasía",
             "autores": "Neil Burger",
-            "image": "img/divergent.jpg"
+            "image": "img/divergent.JPG"
         },
         {
             "id": 50925,
@@ -38,7 +38,7 @@
             "genero": "Fantasía",
             "estreno": "2001",
             "autores": "J.R.R. Tolkien",
-            "image": "img/elsenordelosanillos.jpg"
+            "image": "img/elsenordelosanillos.JPG"
         }
     ]
 }

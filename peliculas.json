@@ -39,6 +39,38 @@
             "estreno": "2001",
             "autores": "J.R.R. Tolkien",
             "image": "img/elsenordelosanillos.JPG"
-        }
+        },
+        {
+            "id": 50926,
+            "name": "Ratatouille",
+            "genero": "Animación Comedia",
+            "estreno": "2007",
+            "autores": "Brad Bird",
+            "image": "img/ratatouille.jpg"
+        },
+        {
+            "id": 50927,
+            "name": "Barbie",
+            "genero": "Comedia / Fantasía",
+            "estreno": "2023",
+            "autores": "Greta Gerwig",
+            "image": "img/barbie.jpg"
+        },
+        {
+            "id": 50928,
+            "name": "La dama y el vagabundo",
+            "genero": "Animación",
+            "estreno": "1955",
+            "autores": "Wilfred Jackson, Clyde Geronimi",
+            "image": "img/damayvagabundo.jpg"
+        }, 
+        {
+            "id": 50929,
+            "name": "Dumbo",
+            "genero": "Animación",
+            "estreno": "1942",
+            "autores": "Ben Sharpsteen, Bill Roberts",
+            "image": "img/dumbo.jpg"
+        } 
     ]
 }

@@ -24,51 +24,34 @@ document.addEventListener("DOMContentLoaded", function() {
             showCategoriesList(peliculasArray);
         }
     });
-
-    document.getElementById("muebles").addEventListener("click", function() {
-        localStorage.setItem("catID", 103);
-        window.location = "products.html"
-    });
 });
-
 
 function showCategoriesList(array) {
     let htmlContentToAppend = "";
     for (let i = 0; i < array.length; i++) {
         htmlContentToAppend += `
         <div class="col-4">
-                        <img src="${array[i].image}" alt="peli image" class="img">
-                                <h2 class="nombre-peli">${array[i].name}</h2>
-                                <p>Año de estreno:${array[i].estreno}</p> 
-                                <p>Autores: ${array[i].autores} </p>
-                                <p>Género:${array[i].genero}</p>
-                                <button id="boton">Agregar a mi lista</button>
-                                </div>
+            <img src="${array[i].image}" alt="peli image" class="img">
+            <h2 class="nombre-peli">${array[i].name}</h2>
+            <p>Año de estreno: ${array[i].estreno}</p> 
+            <p>Autores: ${array[i].autores} </p>
+            <p>Género: ${array[i].genero}</p>
+            <button type="button" class="btn btn-primary" onclick="setCatID(${array[i].id})" id="boton">Agregar a mi lista</button>
+        </div>
         `;
     }
     document.getElementById("cat-list-container").innerHTML = htmlContentToAppend;
 }
 
+function setCatID(id) {
+    let catIDs = localStorage.getItem("catIDs");
 
-document.getElementById("boton").addEventListener("click", function() {
-    const productId = peliculasArray.get('id');
-localStorage.getItem('productId')
-)};
+    if (!catIDs) {
+        catIDs = [];
+    } else {
+        catIDs = JSON.parse(catIDs);
+    }
 
-//Espera que termine de cargar el DOM para ejecutar la función
-document.addEventListener("DOMContentLoaded", function(){
-    //Obtiene la categoria autos a través de boton y lo guarda en localstorage
-        document.getElementById("autos").addEventListener("click", function() {
-            localStorage.setItem("catID", 101);
-            //Redirecciona a la pagina de productos
-            window.location = "products.html"
-        });
-        document.getElementById("juguetes").addEventListener("click", function() {
-            localStorage.setItem("catID", 102);
-            window.location = "products.html"
-        });
-        document.getElementById("muebles").addEventListener("click", function() {
-            localStorage.setItem("catID", 103);
-            window.location = "products.html"
-        });
-    });
+    catIDs.push(id);
+    localStorage.setItem("catIDs", JSON.stringify(catIDs));
+}

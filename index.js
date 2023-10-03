@@ -24,31 +24,51 @@ document.addEventListener("DOMContentLoaded", function() {
             showCategoriesList(peliculasArray);
         }
     });
+
+    document.getElementById("muebles").addEventListener("click", function() {
+        localStorage.setItem("catID", 103);
+        window.location = "products.html"
+    });
 });
+
 
 function showCategoriesList(array) {
     let htmlContentToAppend = "";
     for (let i = 0; i < array.length; i++) {
         htmlContentToAppend += `
-            <div class="list-group-item">
-                <div class="row">
-                    <div class="col-3">
+        <div class="col-4">
                         <img src="${array[i].image}" alt="peli image" class="img">
-                    </div>
-                    <div class="col">
-                        <div class="d-flex w-100 justify-content-between">
-                            <div class="mb-1">
                                 <h2 class="nombre-peli">${array[i].name}</h2>
                                 <p>Año de estreno:${array[i].estreno}</p> 
                                 <p>Autores: ${array[i].autores} </p>
                                 <p>Género:${array[i].genero}</p>
-                            </div>
-                        </div>
-                        <small class="text-muted"> </small>
-                    </div>
-                </div>
-            </div>
+                                <button id="boton">Agregar a mi lista</button>
+                                </div>
         `;
     }
     document.getElementById("cat-list-container").innerHTML = htmlContentToAppend;
 }
+
+
+document.getElementById("boton").addEventListener("click", function() {
+    const productId = peliculasArray.get('id');
+localStorage.getItem('productId')
+)};
+
+//Espera que termine de cargar el DOM para ejecutar la función
+document.addEventListener("DOMContentLoaded", function(){
+    //Obtiene la categoria autos a través de boton y lo guarda en localstorage
+        document.getElementById("autos").addEventListener("click", function() {
+            localStorage.setItem("catID", 101);
+            //Redirecciona a la pagina de productos
+            window.location = "products.html"
+        });
+        document.getElementById("juguetes").addEventListener("click", function() {
+            localStorage.setItem("catID", 102);
+            window.location = "products.html"
+        });
+        document.getElementById("muebles").addEventListener("click", function() {
+            localStorage.setItem("catID", 103);
+            window.location = "products.html"
+        });
+    });

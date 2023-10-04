@@ -1,5 +1,5 @@
 const peliculasJSON = "peliculas.json";
-
+//Fetch de JSON de peliculas
 async function getJSONData(peliculas) {
     return fetch(peliculas)
         .then(response => {
@@ -34,47 +34,40 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function showMovieList(array, catIDs) {
     const listContainer = document.getElementById("cat-list-container");
-    let htmlContentToAppend = `
-        <h2>Mi Lista de Películas</h2>
-        <ul>
-    `;
-
+    let htmlContentToAppend = "";
+  
     for (let i = 0; i < catIDs.length; i++) {
-        const catID = catIDs[i];
-        const pelicula = array.find(movie => movie.id == catID);
-
-        if (pelicula) {
-            htmlContentToAppend += `
-                <li>
-                <div class="movie-info">
-                    <img src="${pelicula.image}" alt="peli image" class="img">
-                    <h3>${pelicula.name}</h3>
-                </div>
-                    <button type="button" class="btn btn-danger" onclick="removeCatID(${pelicula.id})" id="boton">Quitar</button>
-                </li>
-            `;
-        }
+      const catID = catIDs[i];
+      const pelicula = array.find((movie) => movie.id == catID);
+  
+      if (pelicula) {
+        htmlContentToAppend += `
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card">
+              <img src="${pelicula.image}" class="card-img-top" alt="peli image">
+              <div class="card-body">
+                <h5 class="card-title">${pelicula.name}</h5>
+                <button type="button" class="btn btn-danger" onclick="removeCatID(${pelicula.id})"> Quitar</button></div>
+            </div>
+          </div>
+        `;
+      }
     }
-
-    htmlContentToAppend += `</ul>`;
-    listContainer.innerHTML = htmlContentToAppend;
-}
-
+  
+    listContainer.innerHTML = `<div class="row">${htmlContentToAppend}</div>`;
+  }
+//Funcion para sacar pelicula de mi lista
 function removeCatID(id) {
     let catIDs = localStorage.getItem("catIDs");
-
     if (!catIDs) {
         return; // No hay nada que eliminar
     }
-
     catIDs = JSON.parse(catIDs);
-
     // Busca el índice del ID en el array y lo elimina
     const index = catIDs.indexOf(id);
     if (index !== -1) {
         catIDs.splice(index, 1);
     }
-
     localStorage.setItem("catIDs", JSON.stringify(catIDs));
 
     // Vuelve a cargar la lista actualizada
